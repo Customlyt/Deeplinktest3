@@ -1,0 +1,16 @@
+<ul class="link-list" id="deeplinkList"></ul>
+
+<script>
+const deeplinks = [
+  { label: "Telekom App", href: "telekom://setupRouter" },
+  { label: "Telekom Intent", href: "intent://bbcockpit#Intent;scheme=telekom;package=de.telekom.app;end" },
+  { label: "MeineApp Dashboard", href: "myapp://dashboard" }
+];
+
+const ul = document.getElementById("deeplinkList");
+deeplinks.forEach(link => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a class="button" href="${link.href}">${link.label}</a>`;
+  ul.appendChild(li);
+});
+</script>
