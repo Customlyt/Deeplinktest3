@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeplink Testseite</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 2rem; background: #f5f5f5; }
+  h1 { color: #333; }
+  .link-list { list-style: none; padding: 0; }
+  .link-list li { margin: 1rem 0; }
+  a.button {
+    display: block;
+    padding: 1rem;
+    background: #0078d7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  a.button:hover { background: #005a9e; }
+</style>
+</head>
+<body>
+<h1>Deeplink Testseite</h1>
+<p>Klicke auf einen Button, um die App zu öffnen:</p>
+
+<ul class="link-list">
+  <!-- Deeplinks hier einfügen -->
+  <li>
+    <a class="button" href="telekom://bbcockpit">Telekom App (Custom Scheme)</a>
+  </li>
+  <li>
+    <a class="button" href="intent://bbcockpit#Intent;scheme=telekom;package=de.telekom.app;S.browser_fallback_url=https%3A%2F%2Fwww.telekom.de;end;">
+      Telekom App (Intent mit Fallback)
+    </a>
+  </li>
+  <li>
+    <a class="button" href="myapp://dashboard">MeineApp Dashboard</a>
+  </li>
+  <li>
+    <a class="button" href="intent://other#Intent;scheme=myapp;package=com.example.app;end;">
+      Other App Intent
+    </a>
+  </li>
+</ul>
+
+<p style="margin-top:2rem; font-size:0.9rem; color:#666;">
+Du kannst beliebig viele Deeplinks hinzufügen, einfach eine neue &lt;li&gt; Zeile mit deinem Link einfügen. Der GitHub Pages Link bleibt gleich.
+</p>
+</body>
+</html>
