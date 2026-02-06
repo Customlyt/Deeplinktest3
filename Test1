@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeplink Testseite</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 2rem; background: #f5f5f5; }
+  h1 { color: #333; }
+  a.button {
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #0078d7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  a.button:hover { background: #005a9e; }
+</style>
+</head>
+<body>
+<h1>Deeplink Testseite</h1>
+<p>Klicke auf einen Button, um die App zu öffnen:</p>
+
+<!-- Custom Scheme Deeplink -->
+<a class="button" href="telekom://bbcockpit">
+  Öffne Telekom App (Custom Scheme)
+</a>
+
+<!-- Intent Deeplink (mit Fallback zum Play Store) -->
+<a class="button" href="intent://bbcockpit#Intent;scheme=telekom;package=de.telekom.app;S.browser_fallback_url=https%3A%2F%2Fwww.telekom.de;end;">
+  Öffne Telekom App (Intent mit Fallback)
+</a>
+
+<!-- Optional: Web Fallback -->
+<a class="button" href="https://www.telekom.de">
+  Fallback-Webseite öffnen
+</a>
+
+<p style="margin-top:2rem; font-size:0.9rem; color:#666;">
+Hinweis: Android öffnet die App nur, wenn diese installiert ist. Sonst erfolgt Fallback.
+</p>
+</body>
+</html>
